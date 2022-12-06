@@ -4,12 +4,12 @@ import numpy as np
 import datetime
 import requests
 
-'Nazi Detector muahahaha'
+st.title('Nazi Detector muahahaha')
 
 with st.form(key='params_for_api'):
 
     speech_text = st.text_input('Input the text of your speech here to find out if you are a Nazi:')
-    st.form_submit_button('Make prediction')
+    submit_button = st.form_submit_button('Make prediction')
 
 params = dict(speech_text=speech_text)
 
@@ -20,4 +20,7 @@ prediction = response.json()
 
 pred = prediction["outcome"]
 
-st.header(f'Are you a Nazi? - {pred}')
+st.header('Are you a Nazi?')
+
+if submit_button:
+    st.header(pred)
