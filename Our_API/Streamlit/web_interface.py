@@ -4,11 +4,11 @@ import numpy as np
 import datetime
 import requests
 
-st.title('Nazi Detector muahahaha')
+st.title('Predicting your political leaning')
 
 with st.form(key='params_for_api'):
 
-    speech_text = st.text_input('Input the text of your speech here to find out if you are a Nazi:')
+    speech_text = st.text_input('Input the text of your speech here to find out about your political leaning:')
     submit_button = st.form_submit_button('Make prediction')
 
 params = dict(speech_text=speech_text)
@@ -23,7 +23,7 @@ prediction = response.json()
 
 pred = prediction["outcome"]
 
-st.header('Are you a Nazi?')
+st.header('Does your text follow far-right patterns?')
 
 if submit_button:
     st.header(pred)
