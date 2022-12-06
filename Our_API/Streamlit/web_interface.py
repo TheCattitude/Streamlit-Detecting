@@ -1,7 +1,4 @@
 import streamlit as st
-import matplotlib.pyplot as plt
-import matplotlib
-import seaborn as sns
 import pandas as pd
 import numpy as np
 import datetime
@@ -16,8 +13,8 @@ with st.form(key='params_for_api'):
 
 params = dict(speech_text=speech_text)
 
-taxifare_url = 'http://127.0.0.1:8000/predict'
-response = requests.get(taxifare_url, params=params)
+speeches_url = 'https://speeches-t3lqethc6a-ew.a.run.app/predict'
+response = requests.get(speeches_url, params=params)
 
 prediction = response.json()
 
