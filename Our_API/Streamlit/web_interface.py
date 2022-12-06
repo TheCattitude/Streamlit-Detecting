@@ -13,8 +13,8 @@ with st.form(key='params_for_api'):
 
 params = dict(speech_text=speech_text)
 
-speeches_url = 'https://speeches-t3lqethc6a-ew.a.run.app/predict'
-#speeches_url = 'http://localhost:8000/predict'
+#speeches_url = 'https://speeches-t3lqethc6a-ew.a.run.app/predict'
+speeches_url = 'http://localhost:8000/predict'
 
 response = requests.get(speeches_url, params=params)
 
