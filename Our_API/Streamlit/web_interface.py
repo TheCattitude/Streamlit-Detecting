@@ -8,7 +8,7 @@ import requests
 
 with st.form(key='params_for_api'):
 
-    speech_text = st.text_input('Input the text of your speech here to find out if you are a Nazi:', 'Your speech')
+    speech_text = st.text_input('Input the text of your speech here to find out if you are a Nazi:')
     st.form_submit_button('Make prediction')
 
 params = dict(speech_text=speech_text)
