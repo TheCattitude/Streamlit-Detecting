@@ -96,7 +96,7 @@ def predict(speech_text: str):
     answer=0
 
     if answer == 1:
-        fr = "far right"
+        fr = "Yes, your text follows far-right patterns."
     else:
-        fr = "not far right"
+        fr = "No, your text could fall anywhere on the spectrum between left and conservative."
     return dict(outcome=fr)
