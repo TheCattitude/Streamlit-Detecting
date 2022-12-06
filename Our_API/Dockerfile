@@ -3,7 +3,7 @@
 # ####### 👇 SIMPLE SOLUTION (x86 and M1) 👇 ########
 FROM python:3.8.12-buster
 WORKDIR /prod
-COPY Our_API Our_API
+COPY . .
 COPY requirements.txt requirements.txt
 COPY setup.py setup.py
 RUN pip install .

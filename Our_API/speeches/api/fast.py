@@ -93,7 +93,7 @@ def predict(speech_text: str):
     speech_text = preprocess_text(speech_text)[0] # inputs_ids_test
     #answer = app.state.model.predict(speech_text) # check if it returns integer, this should be the last line
     # answer = model(speech_text) #ask Elena what this line does
-    answer=1
+    answer=0
 
     if answer == 1:
         fr = "far right"
