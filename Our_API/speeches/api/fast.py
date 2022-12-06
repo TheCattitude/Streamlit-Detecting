@@ -78,24 +78,25 @@ def preprocess_text(text):
 
 
 
-@app.get("/predict")
-def predict(speech_text: str):
+#@app.get("/predict")
+#def predict(speech_text: str):
 
     #here the user input is turned into a dataframe so the predict function can use it
     #first speech text is the column name
-    X_pred = pd.DataFrame(dict(
-        speech_text=[speech_text]))
-
+ #   X_pred = pd.DataFrame(dict(
+  #      speech_text=[speech_text]))
 #    return dict(outcome=str("maybe"))
-    return X_pred
+ #   return X_pred
 
+@app.get("/predict")
+def predict(speech_text: str):
+    speech_text = preprocess_text(speech_text)[0] # inputs_ids_test
+    #answer = app.state.model.predict(speech_text) # check if it returns integer, this should be the last line
+    # answer = model(speech_text) #ask Elena what this line does
+    answer=1
 
-#     model = app.state.model
-#     X_processed = preprocess_features(X_pred)
-#     y_pred = model.predict(X_processed)
-
-#     # ⚠️ fastapi only accepts simple python data types as a return value
-#     # among which dict, list, str, int, float, bool
-#     # in order to be able to convert the api response to json
-#     return dict(fare=float(y_pred))
-#     # $CHA_END
+    if answer == 1:
+        fr = "far right"
+    else:
+        fr = "not far right"
+    return dict(outcome=fr)
