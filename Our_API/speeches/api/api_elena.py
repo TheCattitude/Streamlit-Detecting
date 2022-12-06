@@ -7,6 +7,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+import torch
 from torch.utils.data import TensorDataset
 from transformers import BertTokenizer 
 
@@ -24,7 +25,7 @@ app.add_middleware(
 
 
 # download our model
-#### model =
+model = torch.load('model.pt')
 
 
 # download BERT tokenizer
