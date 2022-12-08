@@ -8,7 +8,7 @@ st.title('Does your speech text follow far-right patterns?')
 
 with st.form(key='params_for_api'):
 
-    speech_text = st.text_input('Input your speech here:')
+    speech_text = st.text_area('Input your speech here:')
     submit_button = st.form_submit_button('Make prediction')
 
 params = dict(speech_text=speech_text)
