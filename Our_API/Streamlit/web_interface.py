@@ -23,7 +23,5 @@ prediction = response.json()
 
 pred = prediction["outcome"]
 
-st.header('At an accuracy of 82% your speech is:')
-
 if submit_button:
-    st.header(pred)
+    st.header(f'At an accuracy of 82% your speech is {pred}')
