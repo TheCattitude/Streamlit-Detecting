@@ -12,6 +12,7 @@ dist/
 *.iml
 *.egg-info
 *.vscode
+__pycache__
 
 # Data files
 *.csv
@@ -22,3 +23,6 @@ training_outputs/
 *.sublime-project
 *.sublime-workspace
 **/*.code-workspace
+
+#not sure if this code might come in useful later
+api_elena.py
